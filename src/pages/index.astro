@@ -119,15 +119,31 @@ import Layout from '../layouts/Layout.astro';
 			gap: 3rem 2rem;
 		}
 	}
+
 	@media (max-width: 650px) {
 		.folder-grid {
 			grid-template-columns: repeat(2, 1fr);
+			gap: 3rem 1.5rem;
+		}
+		.portal {
+			padding: 4rem 1.5rem;
+		}
+		.tagline {
+			letter-spacing: 4px;
+			font-size: 0.95rem;
 		}
 	}
+
 	@media (max-width: 400px) {
 		.folder-grid {
-			grid-template-columns: 1fr;
-			gap: 2rem;
+			gap: 2rem 1rem;
+		}
+		.portal {
+			padding: 3rem 1rem;
+		}
+		.tagline {
+			letter-spacing: 2px;
+			font-size: 0.85rem;
 		}
 	}
 
