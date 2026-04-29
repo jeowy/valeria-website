@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Tienda | Valeria">
+	<main>
+		<h1>Tienda</h1>
+		<p>Non-ecommerce waitlist/email capture for future merch (prints/stickers).</p>
+		
+		<div class="ornate-frame">
+			<h2>Join the Waitlist</h2>
+			<form action="#" method="POST">
+				<input type="email" name="email" placeholder="your@email.com" required />
+				<button type="submit">Notify Me</button>
+			</form>
+		</div>
+
+		<nav>
+			<a href="/">← Back Home</a>
+		</nav>
+	</main>
+</Layout>
+
+<style>
+	main { padding: 4rem; }
+	h1 { font-size: 3rem; margin-bottom: 2rem; color: var(--color-marigold); }
+	.ornate-frame { max-width: 400px; margin-top: 2rem; }
+	form { display: flex; gap: 1rem; margin-top: 1rem; }
+	nav { margin-top: 4rem; }
+</style>

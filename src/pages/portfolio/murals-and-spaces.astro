@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Murals & Spaces | Valeria">
+	<main>
+		<h1>Murals & Spaces</h1>
+		<p>Archive of large-scale immovable works.</p>
+		<div class="gallery">
+			<div class="digital-polaroid">
+				<div class="placeholder" style="width: 300px; height: 400px; background: var(--color-velvet-red);"></div>
+				<p>Coming Soon</p>
+			</div>
+		</div>
+		<nav>
+			<a href="/">← Back Home</a>
+		</nav>
+	</main>
+</Layout>
+
+<style>
+	main { padding: 4rem; }
+	h1 { font-size: 3rem; margin-bottom: 2rem; color: var(--color-marigold); }
+	.gallery { display: flex; gap: 2rem; flex-wrap: wrap; }
+	nav { margin-top: 4rem; }
+</style>

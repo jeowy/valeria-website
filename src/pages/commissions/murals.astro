@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Mural Commissions | Valeria">
+	<main>
+		<div class="ornate-frame">
+			<h1>Mural Commissions</h1>
+			<p>B2B funnel for holistic spaces/restaurants.</p>
+			
+			<form action="#" method="POST">
+				<div class="field">
+					<label for="org">Organization / Space Name</label>
+					<input type="text" id="org" name="org" required placeholder="La Catrina Bistro..." />
+				</div>
+				<div class="field">
+					<label for="location">Location</label>
+					<input type="text" id="location" name="location" required placeholder="Mexico City, CDMX" />
+				</div>
+				<div class="field">
+					<label for="dimensions">Estimated Dimensions (m²)</label>
+					<input type="text" id="dimensions" name="dimensions" placeholder="e.g. 5x3 meters" />
+				</div>
+				<div class="field">
+					<label for="vision">Your Vision</label>
+					<textarea id="vision" name="vision" rows="5" placeholder="Tell me about the energy of the space..."></textarea>
+				</div>
+				<button type="submit">Submit Inquiry</button>
+			</form>
+		</div>
+		<nav>
+			<a href="/">← Back Home</a>
+		</nav>
+	</main>
+</Layout>
+
+<style>
+	main { padding: 4rem; display: flex; flex-direction: column; align-items: center; }
+	.ornate-frame { max-width: 600px; width: 100%; }
+	h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-marigold); }
+	p { margin-bottom: 2rem; color: var(--color-magenta); }
+	form { display: flex; flex-direction: column; gap: 1.5rem; }
+	.field { display: flex; flex-direction: column; gap: 0.5rem; }
+	label { font-family: var(--font-heading); font-size: 0.9rem; text-transform: uppercase; color: var(--color-marigold); }
+	nav { margin-top: 4rem; }
+</style>

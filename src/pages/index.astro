@@ -1,0 +1,143 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Valeria | Arte & Surrealismo">
+	<main class="portal">
+		<div class="desktop-bg">
+
+			<header class="site-header">
+				<h1>Valeria</h1>
+				<p class="tagline">Arte · Encargos · Surrealismo Mexicano</p>
+			</header>
+
+			<!-- Win2k-style folder navigation grid -->
+			<nav class="folder-grid" aria-label="Main navigation">
+
+				<a href="/portfolio/murals-and-spaces" class="win2k-folder">
+					<div class="folder-icon"></div>
+					<span>Murales &amp; Espacios</span>
+				</a>
+
+				<a href="/portfolio/canvas-and-wood" class="win2k-folder">
+					<div class="folder-icon"></div>
+					<span>Lienzo &amp; Madera</span>
+				</a>
+
+				<a href="/portfolio/objetos" class="win2k-folder">
+					<div class="folder-icon"></div>
+					<span>Objetos</span>
+				</a>
+
+				<a href="/commissions/murals" class="win2k-folder">
+					<div class="folder-icon"></div>
+					<span>Encargar Mural</span>
+				</a>
+
+				<a href="/commissions/bespoke" class="win2k-folder">
+					<div class="folder-icon"></div>
+					<span>Encargo Bespoke</span>
+				</a>
+
+				<a href="/linaje" class="win2k-folder">
+					<div class="folder-icon"></div>
+					<span>Linaje</span>
+				</a>
+
+				<a href="/tienda" class="win2k-folder">
+					<div class="folder-icon"></div>
+					<span>Tienda</span>
+				</a>
+
+				<a href="/contact" class="win2k-folder">
+					<div class="folder-icon"></div>
+					<span>Contacto</span>
+				</a>
+
+			</nav>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.portal {
+		min-height: 100vh;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 4rem 2rem;
+		position: relative;
+		z-index: 1;
+	}
+
+	.desktop-bg {
+		width: 100%;
+		max-width: 1000px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 5rem;
+	}
+
+	.site-header {
+		text-align: center;
+	}
+
+	h1 {
+		font-size: clamp(3.5rem, 12vw, 8rem);
+		color: var(--color-cream);
+		text-shadow:
+			4px 4px 0 var(--color-pink-shadow),
+			8px 8px 0 rgba(0,0,0,0.3);
+		line-height: 1;
+		margin-bottom: 0.8rem;
+		text-transform: uppercase;
+	}
+
+	.tagline {
+		font-family: var(--font-body);
+		font-size: 1.1rem;
+		letter-spacing: 6px;
+		text-transform: uppercase;
+		color: var(--color-dusty-pink);
+		font-weight: 300;
+	}
+
+	.folder-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 4rem 3rem;
+		justify-items: center;
+		width: 100%;
+	}
+
+	@media (max-width: 900px) {
+		.folder-grid {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 3rem 2rem;
+		}
+	}
+	@media (max-width: 650px) {
+		.folder-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media (max-width: 400px) {
+		.folder-grid {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+	}
+
+	/* Ensure anchor inherits folder styles */
+	a.win2k-folder {
+		border-bottom: none;
+		text-decoration: none;
+	}
+	a.win2k-folder:hover span {
+		color: var(--color-pink-light);
+		text-decoration: underline;
+	}
+</style>

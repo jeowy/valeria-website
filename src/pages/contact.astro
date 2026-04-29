@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact | Valeria">
+	<main>
+		<h1>Contact</h1>
+		<p>General inquiries.</p>
+		
+		<div class="ornate-frame">
+			<form action="#" method="POST">
+				<div class="field">
+					<label for="name">Name</label>
+					<input type="text" id="name" name="name" required />
+				</div>
+				<div class="field">
+					<label for="subject">Subject</label>
+					<input type="text" id="subject" name="subject" required />
+				</div>
+				<div class="field">
+					<label for="message">Message</label>
+					<textarea id="message" name="message" rows="5" required></textarea>
+				</div>
+				<button type="submit">Send Message</button>
+			</form>
+		</div>
+
+		<nav>
+			<a href="/">← Back Home</a>
+		</nav>
+	</main>
+</Layout>
+
+<style>
+	main { padding: 4rem; }
+	h1 { font-size: 3rem; margin-bottom: 2rem; color: var(--color-marigold); }
+	.ornate-frame { max-width: 500px; }
+	form { display: flex; flex-direction: column; gap: 1.5rem; }
+	.field { display: flex; flex-direction: column; gap: 0.5rem; }
+	label { font-family: var(--font-heading); color: var(--color-marigold); text-transform: uppercase; }
+	nav { margin-top: 4rem; }
+</style>
